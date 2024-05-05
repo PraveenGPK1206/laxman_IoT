@@ -8,6 +8,8 @@ router.post('/', createEntry);
 
 //read all entries
 router.get('/', readAllEntries);
+//filter entries
+router.get('/filter', filterEntries);
 
 router.get('/filter', filterEntries);
 
