@@ -12,7 +12,7 @@ export const createEntry = async(req,res,next)=>{
 
 export const readAllEntries = async(req, res,next)=>{
     try {
-        const Entries = await Conditions.find().sort({timestamp: -1}).limit(100);
+        const Entries = await Conditions.find();
         //const {_id, _v, ...otherDetails} = Entries._doc;
         res.status(200).json(Entries);
     } catch (error) {
