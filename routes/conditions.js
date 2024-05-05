@@ -1,5 +1,5 @@
 import express from 'express'
-import { createEntry, readAllEntries, entriesByLoc, entriesByVal } from '../controllers/conditions.js';
+import { createEntry, readAllEntries, entriesByLoc, entriesByVal, filterEntries } from '../controllers/conditions.js';
 
 const router = express.Router();
 
@@ -8,6 +8,8 @@ router.post('/', createEntry);
 
 //read all entries
 router.get('/', readAllEntries);
+
+router.get('/filter', filterEntries);
 
 //Search by location
 router.get('/byLocation', entriesByLoc);
